@@ -291,6 +291,10 @@ body > article > aside > a:hover {
   opacity: 0.9;
 }
 
+ul {
+  list-style-type: none;
+}
+
 footer a {
   font-size: 5rem;
   text-decoration: none;
@@ -302,17 +306,17 @@ footer a:hover {
   text-decoration: underline;
 }
 
-footer > div {
+footer > ul > li {
   text-align: center;
   padding-bottom: 160px;
 }
 
-footer > div:nth-of-type(1) {
+footer > ul > li:nth-of-type(1) {
   padding-top: 280px;
 }
 
-footer > div:nth-of-type(4) {
-  text-align: center;
+footer > div {
+  padding-bottom: 150px;
 }
 
 @keyframes heart {
@@ -324,7 +328,7 @@ footer > div:nth-of-type(4) {
   }
 }
 
-footer > div:nth-of-type(4) > span {
+footer > div > span {
   animation: heart 1s infinite ease-in-out;
   position: absolute;
   left: 50%;
