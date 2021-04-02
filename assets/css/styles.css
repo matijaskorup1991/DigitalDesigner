@@ -67,7 +67,7 @@ section:not(section:nth-of-type(1)) {
   padding-bottom: 60px;
 }
 
-section:not(section:nth-of-type(1)) main p {
+section:not(section:nth-of-type(1)) article p {
   font-family: "Didact Gothic", sans-serif;
   color: white;
   font-size: 0.7rem;
@@ -75,7 +75,7 @@ section:not(section:nth-of-type(1)) main p {
   opacity: 0.5;
 }
 
-section > main > div:nth-of-type(2) > a {
+section > article > div:nth-of-type(2) > a {
   text-decoration: none;
   color: white;
   border: 1px solid white;
@@ -86,7 +86,7 @@ section > main > div:nth-of-type(2) > a {
   cursor: pointer;
 }
 
-main {
+section > article {
   padding-left: 16%;
   padding-bottom: 40px;
 }
@@ -96,7 +96,7 @@ section:nth-of-type(2) {
     url("../img/portfolio2.jpg") no-repeat center/cover;
 }
 
-section > main h3::before {
+section > article h3::before {
   content: "";
   background-color: white;
   width: 20px;
@@ -107,17 +107,17 @@ section > main h3::before {
   margin-right: 10px;
 }
 
-section:nth-of-type(3) > main h3::before,
-section:nth-of-type(5) > main h3::before {
+section:nth-of-type(3) > article h3::before,
+section:nth-of-type(5) > article h3::before {
   background-color: #333;
 }
 
-section:nth-of-type(2) > main > div:nth-of-type(1) > h3 {
+section:nth-of-type(2) > article > div:nth-of-type(1) > h3 {
   color: white;
   opacity: 0.5;
 }
 
-section > main > div:nth-of-type(2) > h1 {
+section > article > div:nth-of-type(2) > h1 {
   color: white;
   text-align: right;
   font-size: 5.4rem;
@@ -145,9 +145,7 @@ section > main > div:nth-of-type(2) > h1 {
 }
 
 section:nth-of-type(3) {
-  background-image: url("../img/portfolio3.png");
-  background-size: cover;
-  background-position: center;
+  background: url("../img/portfolio3.png") no-repeat center/cover;
 }
 
 /* NOT WORKING */
@@ -172,32 +170,32 @@ section:nth-of-type(4) {
     url("../img/portfolio4.jpg") no-repeat center/cover;
 }
 
-section:nth-of-type(3) > main > div:nth-of-type(2) > a,
-section:nth-of-type(5) > main > div:nth-of-type(2) > a {
+section:nth-of-type(3) > article > div:nth-of-type(2) > a,
+section:nth-of-type(5) > article > div:nth-of-type(2) > a {
   color: black;
   border: 1px solid black;
 }
 
-section:nth-of-type(2) > main > div:nth-of-type(2) > a:hover,
-section:nth-of-type(4) > main > div:nth-of-type(2) > a:hover {
+section:nth-of-type(2) > article > div:nth-of-type(2) > a:hover,
+section:nth-of-type(4) > article > div:nth-of-type(2) > a:hover {
   color: black;
   background-color: white;
 }
 
-section:nth-of-type(3) > main > div:nth-of-type(2) > a:hover,
-section:nth-of-type(5) > main > div:nth-of-type(2) > a:hover {
+section:nth-of-type(3) > article > div:nth-of-type(2) > a:hover,
+section:nth-of-type(5) > article > div:nth-of-type(2) > a:hover {
   color: white;
   background-color: black;
 }
 
-section:nth-of-type(3) > main > div:nth-of-type(2) > h1,
-section:nth-of-type(5) > main > div:nth-of-type(2) > h1 {
+section:nth-of-type(3) > article > div:nth-of-type(2) > h1,
+section:nth-of-type(5) > article > div:nth-of-type(2) > h1 {
   opacity: 1;
   color: #666;
 }
 
-section:nth-of-type(3) > main > h1,
-section:nth-of-type(5) > main > h1 {
+section:nth-of-type(3) > article > h1,
+section:nth-of-type(5) > article > h1 {
   color: #333;
 }
 
@@ -227,12 +225,12 @@ span {
   opacity: 1;
 }
 
-section:nth-of-type(4) > main > div:nth-of-type(1) > h3 {
+section:nth-of-type(4) > article > div:nth-of-type(1) > h3 {
   color: white;
   opacity: 0.5;
 }
 
-section:nth-of-type(4) > main > div:nth-of-type(2) > h1 {
+section:nth-of-type(4) > article > div:nth-of-type(2) > h1 {
   opacity: 0.1;
 }
 
@@ -257,29 +255,29 @@ section:nth-of-type(5) {
   color: #333;
 }
 
-article {
+body > article {
   background-color: #000;
 }
 
-article > h1 {
+body > article > h1 {
   font-family: "Work Sans", sans-serif;
   font-size: 6rem;
   text-align: center;
   color: white;
 }
 
-article > aside {
+body > article > aside {
   width: 50%;
   margin: 100px 30px 0 auto;
   color: #666;
 }
 
-article > aside > p {
+body > article > aside > p {
   padding: 0 40px 80px 0;
   font-family: "Didact Gothic", sans-serif;
 }
 
-article > aside > a {
+body > article > aside > a {
   color: #fff;
   font-size: 2rem;
   text-decoration: none;
@@ -288,7 +286,7 @@ article > aside > a {
   font-family: "Didact Gothic", sans-serif;
 }
 
-article > aside > a:hover {
+body > article > aside > a:hover {
   text-decoration: underline;
   opacity: 0.9;
 }
