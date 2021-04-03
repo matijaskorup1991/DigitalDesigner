@@ -21,14 +21,6 @@ h2 {
   font-size: 3rem;
 }
 
-h3 {
-  color: #333;
-  font-size: 0.8rem;
-  font-family: "Didact Gothic", sans-serif;
-  opacity: 0.7;
-  padding: 200px 0 30px 0;
-}
-
 section:nth-of-type(1) > header > p {
   text-align: center;
   font-family: "Work Sans", sans-serif;
@@ -54,27 +46,33 @@ section:nth-of-type(1) > h1 {
   font-family: "Work Sans", sans-serif;
 }
 
-section:nth-of-type(2) > article > h1,
-section:nth-of-type(4) > article > h1 {
-  text-transform: uppercase;
-  margin: 0;
-  font-size: 3rem;
-  color: white;
-  font-family: "Work Sans", sans-serif;
+/* BACKGROUND IMAGES */
+section:nth-of-type(2) {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/portfolio2.jpg") no-repeat center/cover;
 }
 
-section:nth-of-type(3) article h1,
-section:nth-of-type(5) article h1 {
-  color: #333;
-  text-transform: uppercase;
-  margin: 0;
-  font-size: 3rem;
-  font-family: "Work Sans", sans-serif;
+section:nth-of-type(3) {
+  background: url("../img/portfolio3.png") no-repeat center/cover;
+}
+
+section:nth-of-type(4) {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/portfolio4.jpg") no-repeat center/cover;
+}
+
+section:nth-of-type(5) {
+  background: url("../img/portfolio5.png") no-repeat center/cover;
 }
 
 section:not(section:nth-of-type(1)) {
   width: 100%;
   padding-bottom: 60px;
+}
+
+section:not(section:nth-of-type(1)) > article {
+  padding-left: 16%;
+  padding-bottom: 40px;
 }
 
 section:not(section:nth-of-type(1)) > article p {
@@ -83,6 +81,22 @@ section:not(section:nth-of-type(1)) > article p {
   font-size: 0.7rem;
   margin: 40px 0 80px 0;
   opacity: 0.5;
+}
+
+section:nth-of-type(2n) > article > h1 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 3rem;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+}
+
+section:nth-of-type(2n + 1) > article > h1 {
+  color: #333;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 3rem;
+  font-family: "Work Sans", sans-serif;
 }
 
 section > article > div > a {
@@ -96,17 +110,30 @@ section > article > div > a {
   cursor: pointer;
 }
 
-section:not(section:nth-of-type(1)) > article {
-  padding-left: 16%;
-  padding-bottom: 40px;
+section:nth-of-type(2n + 1) > article > div > a {
+  color: black;
+  border: 1px solid black;
 }
 
-section:nth-of-type(2) {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../img/portfolio2.jpg") no-repeat center/cover;
+section:nth-of-type(2n) > article > div > a:hover {
+  color: black;
+  background-color: white;
 }
 
-section > article h3::before {
+section:nth-of-type(2n + 1) > article > div > a:hover {
+  color: white;
+  background-color: black;
+}
+
+section h3 {
+  color: #333;
+  font-size: 0.8rem;
+  font-family: "Didact Gothic", sans-serif;
+  opacity: 0.7;
+  padding: 200px 0 30px 0;
+}
+
+section h3::before {
   content: "";
   background-color: white;
   width: 20px;
@@ -117,12 +144,11 @@ section > article h3::before {
   margin-right: 10px;
 }
 
-section:nth-of-type(3) > article h3::before,
-section:nth-of-type(5) > article h3::before {
+section:nth-of-type(2n + 1) h3::before {
   background-color: #333;
 }
 
-section:nth-of-type(2) > article > h3 {
+section:nth-of-type(2n) h3 {
   color: white;
   opacity: 0.5;
 }
@@ -137,71 +163,17 @@ section > article > div > h2 {
   opacity: 0.1;
 }
 
-/* NOT WORKING */
-/* section:nth-of-type(2)
-  > main
-  > div:nth-of-type(2)
-  > a:hover
-  + section:nth-of-type(3)
-  > main
-  > div:nth-of-type(2)
-  > h1 {
-  opacity: 1;
-} */
-
-/* WORKING */
-#linkTo:hover + #siteNummer {
-  opacity: 1;
-}
-
-section:nth-of-type(3) {
-  background: url("../img/portfolio3.png") no-repeat center/cover;
-}
-
-/* NOT WORKING */
-/* section:nth-of-type(3)
-  > main
-  > div:nth-of-type(2)
-  > a:hover
-  + section:nth-of-type(3)
-  > main
-  > div:nth-of-type(2)
-  > h1 {
-  color: #333;
-} */
-
-/* WORKING */
-#linkTo2:hover + #siteNummer2 {
-  color: #333;
-}
-
-section:nth-of-type(4) {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../img/portfolio4.jpg") no-repeat center/cover;
-}
-
-section:nth-of-type(3) > article > div > a,
-section:nth-of-type(5) > article > div > a {
-  color: black;
-  border: 1px solid black;
-}
-
-section:nth-of-type(2) > article > div > a:hover,
-section:nth-of-type(4) > article > div > a:hover {
-  color: black;
-  background-color: white;
-}
-
-section:nth-of-type(3) > article > div > a:hover,
-section:nth-of-type(5) > article > div > a:hover {
-  color: white;
-  background-color: black;
-}
-
-section:nth-of-type(3) > article > div > h2,
-section:nth-of-type(5) > article > div > h2 {
+section:nth-of-type(2n + 1) > article > div > h2 {
   opacity: 1;
   color: #666;
+}
+
+section:nth-of-type(2n) a:hover + h2 {
+  opacity: 1;
+}
+
+section:nth-of-type(2n + 1) a:hover + h2 {
+  color: #333;
 }
 
 span {
@@ -211,53 +183,6 @@ span {
   margin: 40px 0 80px 0;
   color: #333;
   opacity: 1;
-}
-
-/* NOT WORKING */
-/* section:nth-of-type(4)
-  > main
-  > div:nth-of-type(2)
-  > a:hover
-  + section:nth-of-type(3)
-  > main
-  > div:nth-of-type(2)
-  > h1 {
-  opacity: 1;
-} */
-
-/* WORKING */
-#linkTo1:hover + #siteNummer1 {
-  opacity: 1;
-}
-
-section:nth-of-type(4) > article > h3 {
-  color: white;
-  opacity: 0.5;
-}
-
-section:nth-of-type(4) > article > div > h2 {
-  opacity: 0.1;
-}
-
-section:nth-of-type(5) {
-  background: url("../img/portfolio5.png") no-repeat center/cover;
-}
-
-/* NOT WORKING */
-/* section:nth-of-type(5)
-  > main
-  > div:nth-of-type(2)
-  > a:hover
-  + section:nth-of-type(3)
-  > main
-  > div:nth-of-type(2)
-  > h1 {
-  color: #333;
-} */
-
-/* WORKING */
-#linkTo3:hover + #siteNummer3 {
-  color: #333;
 }
 
 body > article {
