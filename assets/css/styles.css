@@ -139,7 +139,6 @@ section h3::before {
   width: 20px;
   vertical-align: middle;
   height: 3px;
-  width: 10px;
   display: inline-block;
   margin-right: 10px;
 }
@@ -190,7 +189,7 @@ body > article {
 }
 
 body > article > h1 {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Didact Gothic", sans-serif;
   font-size: 6rem;
   text-align: center;
   color: white;
